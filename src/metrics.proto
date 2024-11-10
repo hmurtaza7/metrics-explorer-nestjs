@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package metrics;
+
+service MetricsService {
+  rpc GetHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {}
+
+message HelloResponse {
+  string message = 1;
+}
