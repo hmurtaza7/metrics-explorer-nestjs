@@ -1,7 +1,9 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { Transport } from '@nestjs/microservices';
 import { ReflectionService } from '@grpc/reflection';
+
+import { AppModule } from './app.module';
+import './opentelemetry-setup';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
